@@ -71,14 +71,18 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
+export CDPATH=.:~
+export EDITOR='/usr/bin/vim'
 function exitstatus() {
 	EXIT=$?
 	[ ${EXIT} -ne 0 ] && echo "$(tput setaf 1) :( ${EXIT} $(tput setaf 7) - "
-}
+	}
 
 export PS1="\[$(tput bold)\]\[$(tput setaf 1)\]\t\[$(tput setaf 7)\] - \`exitstatus\`\[$(tput bold)\]\[$(tput setaf 4)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 4)\]\h\[$(tput setaf 7)\]:\[$(tput setaf 1)\]\w\[$(tput setaf 7)\]\\$\[$(tput sgr0)\] "
 
 alias ls='ls -lah --color=auto'
-export CDPATH=.:~
-export EDITOR='/usr/bin/vim'
-export PYTHONSTARTUP=~/.pythonstartup
+
+export PYTHONSTARTUP=/home/danielh/.pythonstartup
+
+export CFLAGS="-Wall"
