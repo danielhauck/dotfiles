@@ -85,4 +85,6 @@ alias ls='ls -lah --color=auto'
 
 export PYTHONSTARTUP=~/.pythonstartup
 export WORKON_HOME="~/Workspace"
+source  /usr/local/bin/virtualenvwrapper.sh
 export CFLAGS="-Wall"
+
