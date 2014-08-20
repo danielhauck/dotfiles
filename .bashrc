@@ -84,5 +84,5 @@ export PS1="\[$(tput bold)\]\[$(tput setaf 1)\]\t\[$(tput setaf 7)\] - \`exitsta
 alias ls='ls -lah --color=auto'
 
 export PYTHONSTARTUP=~/.pythonstartup
-
+export WORKON_HOME="~/Workspace"
 export CFLAGS="-Wall"
