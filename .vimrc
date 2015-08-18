@@ -53,7 +53,7 @@ autocmd BufWritePre *.pp normal m`:! puppet parser validate %`
 
 ""autocmd eventname pattern command
 
-autocmd BufRead,BufWritePre *.html normal gg=G
+""autocmd BufRead,BufWritePre *.html normal gg=G
 
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
@@ -64,7 +64,9 @@ set wmh=0
 function! Writing()
     set nonumber
     set laststatus=0
-    set wrap
-    set linebreak
-    set textwidth=70
+    set columns=80 
+    setlocal spell spelllang=en_us
 endfunction
+
+autocmd FileType make setlocal noexpandtab
+autocmd FileType markdown call Writing()
