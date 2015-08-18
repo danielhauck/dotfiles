@@ -140,9 +140,9 @@ export CFLAGS="-Wall"
 alias lw-dev='ssh lw-dlh@dev.loc'
 alias lockme="gnome-screensaver-command --lock"
 alias ..='cd ..'
+alias wvim="vim -c 'call Writing()'"
 
 AWS_EB_HOME=/home/dlh/AWS-ElasticBeanstalk-CLI-2.6.4/eb/linux/python2.7
 export PATH=$PATH:${AWS_EB_HOME}
 export WORKON_HOME=~/workspace
 source /usr/local/bin/virtualenvwrapper.sh
-[[ $TERM != "screen" ]] && exec tmux
