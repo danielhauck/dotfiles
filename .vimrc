@@ -66,5 +66,9 @@ function! Writing()
     set laststatus=0
     set wrap
     set linebreak
-    set textwidth=70
+    set columns=80
+    set scrolloff=2
+    set foldmethod=manual
 endfunction
+
+autocmd FileType markdown call Writing()
